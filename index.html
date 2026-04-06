@@ -374,6 +374,29 @@
       flex-shrink: 0;
     }
 
+    .offer-right {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 0.75rem;
+      flex-shrink: 0;
+    }
+
+    .offer-price {
+      font-family: 'Nunito', sans-serif;
+      font-size: 2.2rem;
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      color: var(--accent);
+      line-height: 1;
+    }
+
+    .offer-price span {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--muted);
+    }
+
     .offer-cta { flex-shrink: 0; }
 
     /* PRINZIP */
@@ -697,7 +720,10 @@
         <li>Unterstützung bei Domain, Hosting und Einrichtung</li>
         <li>Online in 1 Woche</li>
       </ul>
-      <button class="btn-send offer-cta" onclick="openModal(event)">Anfragen</button>
+      <div class="offer-right">
+        <div class="offer-price">799,- <span>€</span></div>
+        <button class="btn-send offer-cta" onclick="openModal(event)">Anfragen</button>
+      </div>
     </div>
   </div>
 
