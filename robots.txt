@@ -3,4 +3,4 @@ Allow: /
 
 Disallow: /functions/
 
-Sitemap: https://websitefuerdeinunternehmen.de/sitemap.xml
+Sitemap: https://webseite-hagen.de/sitemap.xml

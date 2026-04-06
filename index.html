@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Website erstellen lassen Hagen | websitefuerdeinunternehmen.de</title>
-  <meta name="description" content="Professionelle Websites für lokale Unternehmen in Hagen und NRW. Einfach. Klar. Funktioniert. Online in 1 Woche – ab 799 € inkl. MwSt." />
-  <meta name="keywords" content="Website erstellen Hagen, Webdesign Hagen, Webdesign NRW, Website lokales Unternehmen, Webseite Handwerk Hagen" />
+  <title>Webseite erstellen lassen Hagen – in 48h online | webseite-hagen.de</title>
+  <meta name="description" content="Keine Website oder eine, die keine Kunden bringt? Ich bring dich in 48 Stunden online – mit einer Website, die Anfragen liefert. Fixpreis 799 € · Lokal in Hagen." />
+  <meta name="keywords" content="Webseite erstellen Hagen, Website erstellen lassen Hagen, Webdesign Hagen, lokale Website NRW, Website Handwerk Hagen" />
   <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://websitefuerdeinunternehmen.de/" />
-  <meta property="og:title" content="Website erstellen lassen in Hagen | websitefuerdeinunternehmen.de" />
-  <meta property="og:description" content="Professionelle Websites für lokale Unternehmen in Hagen und NRW. Online in 1 Woche – ab 799 € inkl. MwSt." />
+  <link rel="canonical" href="https://webseite-hagen.de/" />
+  <meta property="og:title" content="Webseite erstellen lassen Hagen – in 48h online" />
+  <meta property="og:description" content="Ich bring dich in 48 Stunden online – mit einer Website, die Anfragen liefert. Fixpreis 799 € · Lokal in Hagen." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://websitefuerdeinunternehmen.de/" />
+  <meta property="og:url" content="https://webseite-hagen.de/" />
   <meta property="og:locale" content="de_DE" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -696,6 +696,318 @@
       min-height: 1.2em;
     }
 
+    /* TRUST LINE */
+    .hero-trust {
+      margin-top: 1.25rem;
+      font-size: 0.78rem;
+      color: var(--faint);
+      letter-spacing: 0.04em;
+      opacity: 0;
+      animation: fadeUp 0.4s ease 1.05s forwards;
+    }
+
+    .hero-trust span {
+      display: inline-block;
+      margin: 0 0.35rem;
+      color: var(--border);
+    }
+
+    /* PROBLEM LIST */
+    .problem-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+      margin-top: 0.5rem;
+    }
+
+    .problem-list li {
+      font-size: 1rem;
+      color: var(--muted);
+      display: flex;
+      align-items: baseline;
+      gap: 0.85rem;
+      line-height: 1.5;
+    }
+
+    .problem-list li::before {
+      content: '✗';
+      color: #E74C3C;
+      font-size: 0.85rem;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .problem-result {
+      margin-top: 1.75rem;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text);
+      padding: 1rem 1.25rem;
+      border-left: 3px solid #E74C3C;
+      background: #FEF9F9;
+    }
+
+    /* CHECK LIST */
+    .check-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+    }
+
+    .check-list li {
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--text);
+      display: flex;
+      align-items: baseline;
+      gap: 0.85rem;
+    }
+
+    .check-list li::before {
+      content: '✔';
+      color: var(--accent);
+      font-size: 0.85rem;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .check-footnote {
+      margin-top: 1.75rem;
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--text);
+      padding-top: 1rem;
+      border-top: 1px solid var(--border);
+    }
+
+    /* PRICING BOX */
+    .pricing-box {
+      border: 2px solid var(--accent);
+      padding: 2rem;
+      background: var(--surface);
+    }
+
+    .pricing-title {
+      font-family: 'Nunito', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 800;
+      margin-bottom: 0.35rem;
+    }
+
+    .pricing-price {
+      font-family: 'Nunito', sans-serif;
+      font-size: 2.6rem;
+      font-weight: 900;
+      color: var(--accent);
+      letter-spacing: -0.03em;
+      line-height: 1;
+      margin-bottom: 0.25rem;
+    }
+
+    .pricing-price span {
+      font-size: 1.8rem;
+      font-weight: 900;
+      color: var(--accent);
+    }
+
+    .pricing-price small {
+      display: block;
+      font-size: 0.72rem;
+      font-weight: 500;
+      color: var(--faint);
+      margin-top: 0.2rem;
+    }
+
+    .pricing-includes {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      margin: 1.5rem 0;
+      padding-top: 1.25rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .pricing-includes li {
+      font-size: 0.95rem;
+      color: var(--muted);
+      display: flex;
+      align-items: baseline;
+      gap: 0.75rem;
+    }
+
+    .pricing-includes li::before {
+      content: '✔';
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 0.8rem;
+      flex-shrink: 0;
+    }
+
+    .pricing-optional {
+      margin-top: 1.5rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .pricing-optional p {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--faint);
+      margin-bottom: 0.75rem;
+    }
+
+    .pricing-optional ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .pricing-optional ul li {
+      font-size: 0.92rem;
+      color: var(--muted);
+      display: flex;
+      align-items: baseline;
+      gap: 0.75rem;
+    }
+
+    .pricing-optional ul li::before {
+      content: '+';
+      color: var(--accent2);
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    /* STEPS */
+    .steps {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .step {
+      display: flex;
+      align-items: flex-start;
+      gap: 1.25rem;
+      padding: 1.5rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .step:first-child { padding-top: 0; }
+    .step:last-child  { border-bottom: none; padding-bottom: 0; }
+
+    .step-num {
+      font-family: 'Nunito', sans-serif;
+      font-size: 1.8rem;
+      font-weight: 900;
+      color: var(--accent);
+      line-height: 1;
+      min-width: 2rem;
+      flex-shrink: 0;
+    }
+
+    .step-content h3 {
+      font-family: 'Nunito', sans-serif;
+      font-size: 1rem;
+      font-weight: 800;
+      margin-bottom: 0.25rem;
+    }
+
+    .step-content p {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    /* CTA FINAL */
+    .cta-final {
+      background: var(--accent);
+      padding: 4rem var(--indent);
+      text-align: center;
+    }
+
+    .cta-final h2 {
+      font-family: 'Nunito', sans-serif;
+      font-size: clamp(1.4rem, 3.5vw, 2rem);
+      font-weight: 900;
+      color: #fff;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.5rem;
+    }
+
+    .btn-white {
+      display: inline-block;
+      background: #fff;
+      color: var(--accent);
+      border: none;
+      padding: 0.9rem 2.25rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 700;
+      cursor: pointer;
+      border-radius: 4px;
+      transition: opacity 0.15s, transform 0.1s;
+      text-decoration: none;
+    }
+
+    .btn-white:hover { opacity: 0.9; transform: translateY(-1px); }
+
+    .cta-sub {
+      margin-top: 1rem;
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.7);
+      letter-spacing: 0.04em;
+    }
+
+    /* DIFFERENZIERUNG */
+    .differenz-text {
+      font-size: 1.1rem;
+      line-height: 1.85;
+      color: var(--muted);
+    }
+
+    .differenz-text strong {
+      display: block;
+      font-family: 'Nunito', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--text);
+      margin-bottom: 1rem;
+    }
+
+    .differenz-list {
+      list-style: none;
+      margin: 1rem 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .differenz-list li {
+      font-size: 0.98rem;
+      color: var(--muted);
+      display: flex;
+      align-items: baseline;
+      gap: 0.75rem;
+    }
+
+    .differenz-list li::before {
+      content: '—';
+      color: var(--faint);
+      flex-shrink: 0;
+    }
+
+    .differenz-result {
+      margin-top: 1.5rem;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+
     /* FOOTER */
     footer {
       border-top: 1px solid var(--border);
@@ -729,113 +1041,140 @@
 
   <!-- NAV -->
   <nav>
-    <span class="nav-logo">websitefuerdeinunternehmen.de</span>
-    <a href="#" class="nav-cta" onclick="openModal(event)">Anfragen</a>
+    <span class="nav-logo">webseite-hagen.de</span>
+    <a href="#" class="nav-cta" onclick="openModal(event)">Erstgespräch sichern</a>
   </nav>
 
   <!-- HERO -->
   <section class="hero">
     <span class="hero-eyebrow"><span class="eyebrow-ws">Website<span class="eyebrow-s">s</span></span> für <span class="eyebrow-word"><span class="eyebrow-local">lokale</span><span class="eyebrow-dein">DEIN</span></span> Unternehmen</span>
     <h1>
-      <span class="hero-kw">Website erstellen lassen in Hagen</span>
-      <span class="word">Einfach.</span>
-      <span class="word">Klar.</span>
-      <span class="word">Funktioniert.</span>
+      <span class="hero-kw">Website erstellen lassen Hagen – in 48h online</span>
+      <span class="word">Keine Website?</span>
+      <span class="word">Oder eine, die keine Kunden bringt?</span>
     </h1>
-    <p>Damit Besucher sofort verstehen, worum es geht - und Anfragen bringen.</p>
+    <p>Ich bring dich in 48 Stunden online – mit einer Website, die Anfragen liefert. Ohne Agentur-Blabla. Ohne Monate Wartezeit.</p>
     <span class="hero-btn">
-      <button class="btn-send" onclick="openModal(event)">Jetzt anfragen</button>
+      <button class="btn-send" onclick="openModal(event)">Kostenloses Erstgespräch sichern</button>
     </span>
+    <p class="hero-trust">Lokal in Hagen <span>·</span> Fixpreis <span>·</span> Schnell umgesetzt</p>
   </section>
 
   <!-- PROBLEM -->
   <div class="block reveal">
     <p class="label">Das Problem</p>
-    <p class="problem-text">
-      Zu viele Websites sind unnötig kompliziert.<br>
-      <strong>Zu viel Text. Zu viele Optionen. Kein klarer Weg.</strong>
-      <span class="punchline">Der Besucher denkt nach - und geht.</span>
-    </p>
+    <p class="problem-text">Viele Unternehmen in Hagen haben entweder gar keine Website – oder eine, die niemanden überzeugt.</p>
+    <ul class="problem-list">
+      <li>Kein Erstauftritt, keine Anfragen</li>
+      <li>Veraltetes Design, das Vertrauen kostet</li>
+      <li>Technik, die nicht funktioniert</li>
+      <li>Keine Zeit und kein Wissen, das selbst zu ändern</li>
+    </ul>
+    <div class="problem-result">Während du arbeitest, suchen deine Kunden bei Google – und finden jemand anderen.</div>
   </div>
 
   <!-- LÖSUNG -->
   <div class="block reveal">
     <p class="label">Die Lösung</p>
-    <p class="solution-headline">Radikale Vereinfachung.</p>
-    <ul class="solution-list">
-      <li>Eine klare Botschaft</li>
-      <li>Ein klarer Weg</li>
-      <li>Eine klare Handlung</li>
+    <p class="solution-headline">Eine Website, die für dich arbeitet.</p>
+    <ul class="check-list">
+      <li>Eine Webseite, die klar sagt, was du anbietest</li>
+      <li>Design, das Vertrauen aufbaut</li>
+      <li>Schnelle Ladezeiten, mobil optimiert</li>
+      <li>Kontaktformular, das Anfragen sammelt</li>
+      <li>SEO-Grundlagen, damit du bei Google gefunden wirst</li>
     </ul>
-    <p class="solution-footnote">Alles Überflüssige entfernt.</p>
-  </div>
-
-  <!-- ERGEBNIS -->
-  <div class="block reveal">
-    <p class="label">Das Ergebnis</p>
-    <ul class="result-list">
-      <li>Besucher verstehen sofort, worum es geht</li>
-      <li>Weniger Absprünge</li>
-      <li>Mehr Anfragen</li>
-    </ul>
-  </div>
-
-  <!-- LEISTUNGEN -->
-  <div class="block wide reveal" id="leistungen">
-    <p class="label">Leistungen</p>
-    <div class="service-grid">
-      <div class="service-item">
-        <div class="service-icon">▤</div>
-        <h3>Struktur</h3>
-        <p>Auf das Wesentliche reduziert. Kein Ballast.</p>
-      </div>
-      <div class="service-item">
-        <div class="service-icon">◇</div>
-        <h3>Design</h3>
-        <p>Ohne Ablenkung. Alles dient einem Ziel.</p>
-      </div>
-      <div class="service-item">
-        <div class="service-icon">¶</div>
-        <h3>Texte</h3>
-        <p>Direkt. Klar. Verstanden beim ersten Lesen.</p>
-      </div>
-      <div class="service-item">
-        <div class="service-icon">↗</div>
-        <h3>Umsetzung</h3>
-        <p>Schnell. Ohne langes Hin und Her.</p>
-      </div>
-    </div>
+    <p class="check-footnote">Du kümmerst dich um dein Geschäft. Den Rest übernehme ich.</p>
   </div>
 
   <!-- ANGEBOT -->
   <div class="block reveal">
     <p class="label">Das Angebot</p>
-    <div class="offer">
-      <ul class="offer-list">
-        <li>Hauptseite, 2 Unterseiten, Kontaktformular</li>
-        <li>Suchmaschinenoptimierung (SEO)</li>
-        <li>Unterstützung bei Domain, Hosting und Einrichtung</li>
-        <li>Online in 1 Woche</li>
+    <div class="pricing-box">
+      <p class="pricing-title">Komplett-Paket</p>
+      <div class="pricing-price"><span>€</span> 799,-<small>inkl. MwSt.</small></div>
+      <ul class="pricing-includes">
+        <li>Startseite + 2 Unterseiten</li>
+        <li>Kontaktformular</li>
+        <li>SEO-Optimierung</li>
+        <li>Domain- und Hosting-Einrichtung</li>
+        <li>Texterstellung auf Wunsch</li>
       </ul>
-      <div class="offer-right">
-        <div class="offer-price">799,- <span>€</span><small>inkl. MwSt.</small></div>
-        <button class="btn-send offer-cta" onclick="openModal(event)">Anfragen</button>
+      <div class="pricing-optional">
+        <p>Auf Wunsch zusätzlich</p>
+        <ul>
+          <li>Mehrsprachigkeit</li>
+          <li>Online-Buchungssystem</li>
+          <li>Google-My-Business-Optimierung</li>
+        </ul>
+      </div>
+      <button class="btn-send" onclick="openModal(event)" style="margin-top:1.75rem;">Kostenloses Erstgespräch sichern</button>
+    </div>
+  </div>
+
+  <!-- DIFFERENZIERUNG -->
+  <div class="block reveal">
+    <p class="label">Warum ich</p>
+    <div class="differenz-text">
+      <strong>Kein Agentur-Konstrukt. Eine Person aus Hagen.</strong>
+      Ich bin kein großes Studio mit Projektmanagern und Warteschlangen. Du redest direkt mit mir – der Person, die deine Seite baut. Das bedeutet: weniger Hin und Her, schnellere Umsetzung, und ein Ergebnis, das wirklich zu dir passt.
+    </div>
+    <ul class="differenz-list">
+      <li>Kein Abomodell, kein versteckter Folgeaufwand</li>
+      <li>Fixpreis von Anfang an</li>
+      <li>Online in 48 Stunden nach Freigabe</li>
+      <li>Direkt erreichbar – auch nach dem Launch</li>
+    </ul>
+    <p class="differenz-result">Lokal. Direkt. Verlässlich.</p>
+  </div>
+
+  <!-- ABLAUF -->
+  <div class="block reveal">
+    <p class="label">So läuft es ab</p>
+    <div class="steps">
+      <div class="step">
+        <span class="step-num">1</span>
+        <div class="step-content">
+          <h3>Kostenloses Erstgespräch</h3>
+          <p>~15 Minuten. Ich höre zu, was du brauchst – und erkläre, was ich liefern kann.</p>
+        </div>
+      </div>
+      <div class="step">
+        <span class="step-num">2</span>
+        <div class="step-content">
+          <h3>Ich baue deine Seite</h3>
+          <p>Nach deiner Freigabe setze ich deine Website in 48 Stunden um.</p>
+        </div>
+      </div>
+      <div class="step">
+        <span class="step-num">3</span>
+        <div class="step-content">
+          <h3>Du gehst online</h3>
+          <p>Domain, Hosting, fertig. Du bist erreichbar – und wirst gefunden.</p>
+        </div>
       </div>
     </div>
   </div>
 
-  <!-- PRINZIP -->
+  <!-- LOKALER TRUST -->
   <div class="block reveal">
-    <p class="label">Das Prinzip</p>
-    <p class="principle">
-      Nicht mehr sagen.<br>
-      <span class="secondary">Sondern das Richtige.</span>
-    </p>
+    <p class="label">Lokal verankert</p>
+    <div class="differenz-text">
+      <strong>Für Unternehmen in Hagen und Umgebung.</strong>
+      Ob Handwerker, Dienstleister oder kleines Ladengeschäft – ich kenne den Markt hier, und ich baue Seiten, die für lokale Kunden funktionieren. Kein Template aus der Schublade, sondern eine Lösung, die zu deinem Betrieb passt.
+    </div>
+  </div>
+
+  <!-- FINAL CTA -->
+  <div class="cta-final reveal">
+    <h2>Bereit, online zu gehen?</h2>
+    <a href="#" class="btn-white" onclick="openModal(event)">Kostenloses Erstgespräch sichern</a>
+    <p class="cta-sub">Kein Abo. Kein Risiko. Einmaliger Fixpreis.</p>
   </div>
 
   <!-- FOOTER -->
   <footer>
-    <span>&copy; 2026 websitefuerdeinunternehmen.de</span>
+    <span>&copy; 2026 webseite-hagen.de</span>
     <span>
       <a href="impressum.html">Impressum</a> &nbsp;·&nbsp; <a href="datenschutz.html">Datenschutz</a>
     </span>

@@ -86,10 +86,10 @@ export async function onRequestPost(context) {
       method: 'POST',
       headers: { 'Authorization': `Bearer ${RESEND_API_KEY}`, 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        from: 'Kontakt <noreply@websitefuerdeinunternehmen.de>',
+        from: 'Kontakt <noreply@webseite-hagen.de>',
         to: [CONTACT_TO_EMAIL],
         reply_to: email.trim(),
-        subject: 'Neue Anfrage - websitefuerdeinunternehmen.de',
+        subject: 'Neue Anfrage - webseite-hagen.de',
         html,
       }),
     });
