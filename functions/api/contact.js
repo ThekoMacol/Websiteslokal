@@ -81,8 +81,9 @@ export async function onRequestPost(context) {
   </table>
 </body></html>`;
 
+  let resendRes;
   try {
-    const res = await fetch('https://api.resend.com/emails', {
+    resendRes = await fetch('https://api.resend.com/emails', {
       method: 'POST',
       headers: { 'Authorization': `Bearer ${RESEND_API_KEY}`, 'Content-Type': 'application/json' },
       body: JSON.stringify({
@@ -93,9 +94,16 @@ export async function onRequestPost(context) {
         html,
       }),
     });
-    if (!res.ok) throw new Error();
-  } catch {
-    return new Response(JSON.stringify({ error: 'Senden fehlgeschlagen. Bitte später erneut versuchen.' }), {
+  } catch (fetchErr) {
+    return new Response(JSON.stringify({ error: 'Netzwerkfehler beim Senden.', detail: String(fetchErr) }), {
+      status: 502, headers: { 'Content-Type': 'application/json', ...corsHeaders },
+    });
+  }
+
+  if (!resendRes.ok) {
+    let detail = '';
+    try { detail = await resendRes.text(); } catch {}
+    return new Response(JSON.stringify({ error: `Resend Fehler ${resendRes.status}`, detail }), {
       status: 502, headers: { 'Content-Type': 'application/json', ...corsHeaders },
     });
   }
