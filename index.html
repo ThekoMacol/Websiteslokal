@@ -220,6 +220,43 @@
       line-height: 1.6;
     }
 
+    /* ANGEBOT */
+    .offer {
+      border: 1.5px solid var(--text);
+      padding: 2rem;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .offer-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+
+    .offer-list li {
+      font-size: 1rem;
+      color: var(--text);
+      display: flex;
+      align-items: baseline;
+      gap: 0.75rem;
+    }
+
+    .offer-list li::before {
+      content: '—';
+      font-size: 0.8rem;
+      color: var(--faint);
+      flex-shrink: 0;
+    }
+
+    .offer-cta {
+      flex-shrink: 0;
+    }
+
     /* PRINZIP */
     .principle {
       font-size: clamp(1.5rem, 4vw, 2.2rem);
@@ -474,6 +511,19 @@
         <h3>Umsetzung</h3>
         <p>Schnell. Ohne langen Hin und Her.</p>
       </div>
+    </div>
+  </div>
+
+  <!-- ANGEBOT -->
+  <div class="block">
+    <p class="label">Das Angebot</p>
+    <div class="offer">
+      <ul class="offer-list">
+        <li>Hauptseite, 2 Unterseiten, Kontaktformular</li>
+        <li>Unterstützung bei Domain, Hosting und Einrichtung</li>
+        <li>Online in 1 Woche</li>
+      </ul>
+      <button class="btn-send offer-cta" onclick="openModal(event)">Anfragen</button>
     </div>
   </div>
 
