@@ -6,7 +6,7 @@
   <title>Einfach. Klar. Funktioniert.</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after {
       box-sizing: border-box;
@@ -15,16 +15,18 @@
     }
 
     :root {
-      --text:          #1E1A16;
-      --muted:         #5C5048;
-      --faint:         #A89E94;
-      --bg:            #FAF8F3;
-      --surface:       #F0EBE3;
-      --border:        #D8D0C6;
-      --outer:         #E0D8CE;
-      --accent:        #2D6A7F;
-      --accent-light:  #EBF4F7;
-      --accent-hover:  #245A6C;
+      --text:          #4A4A4A;
+      --muted:         #717171;
+      --faint:         #ABABAB;
+      --bg:            #FFFFFF;
+      --surface:       #F4FCF7;
+      --border:        #E8E8E8;
+      --outer:         #EBEBEB;
+      --accent:        #27AE60;
+      --accent-light:  #EAFBF2;
+      --accent-hover:  #1E8449;
+      --accent2:       #3498DB;
+      --accent2-light: #EBF5FB;
       --indent:        2.5rem;
     }
 
@@ -44,7 +46,7 @@
       margin: 0 auto;
       background: var(--bg);
       border: 1px solid var(--border);
-      box-shadow: 0 4px 40px rgba(30, 26, 22, 0.09);
+      box-shadow: 0 4px 40px rgba(0, 0, 0, 0.07);
       overflow: hidden;
     }
 
@@ -63,7 +65,7 @@
     }
 
     .nav-logo {
-      font-family: 'Outfit', sans-serif;
+      font-family: 'Nunito', sans-serif;
       font-size: 0.8rem;
       font-weight: 700;
       letter-spacing: 0.08em;
@@ -142,7 +144,7 @@
     }
 
     .hero h1 {
-      font-family: 'Outfit', sans-serif;
+      font-family: 'Nunito', sans-serif;
       font-size: clamp(2.4rem, 6vw, 4rem);
       font-weight: 800;
       letter-spacing: -0.04em;
@@ -222,7 +224,7 @@
 
     /* SOLUTION */
     .solution-headline {
-      font-family: 'Outfit', sans-serif;
+      font-family: 'Nunito', sans-serif;
       font-size: 1.65rem;
       font-weight: 800;
       letter-spacing: -0.03em;
@@ -276,15 +278,15 @@
       align-items: flex-start;
       gap: 0.9rem;
       padding: 1rem 1.25rem;
-      background: var(--accent-light);
-      border-left: 3px solid var(--accent);
+      background: var(--accent2-light);
+      border-left: 3px solid var(--accent2);
     }
 
     .result-list li::before {
       content: '✓';
       font-size: 0.8rem;
       font-weight: 700;
-      color: var(--accent);
+      color: var(--accent2);
       padding-top: 0.15rem;
       flex-shrink: 0;
     }
@@ -321,7 +323,7 @@
     }
 
     .service-item h3 {
-      font-family: 'Outfit', sans-serif;
+      font-family: 'Nunito', sans-serif;
       font-size: 1rem;
       font-weight: 700;
       margin-bottom: 0.4rem;
@@ -376,7 +378,7 @@
 
     /* PRINZIP */
     .principle {
-      font-family: 'Outfit', sans-serif;
+      font-family: 'Nunito', sans-serif;
       font-size: clamp(1.5rem, 3.8vw, 2.2rem);
       font-weight: 800;
       letter-spacing: -0.03em;
@@ -419,7 +421,7 @@
       display: none;
       position: fixed;
       inset: 0;
-      background: rgba(30, 26, 22, 0.55);
+      background: rgba(0, 0, 0, 0.45);
       z-index: 200;
       align-items: center;
       justify-content: center;
@@ -438,7 +440,7 @@
       overflow-y: auto;
       padding: 2.5rem;
       position: relative;
-      box-shadow: 0 16px 60px rgba(30, 26, 22, 0.18);
+      box-shadow: 0 16px 60px rgba(0, 0, 0, 0.12);
       border-radius: 2px;
     }
 
@@ -459,7 +461,7 @@
     .modal-close:hover { color: var(--text); }
 
     .modal h2 {
-      font-family: 'Outfit', sans-serif;
+      font-family: 'Nunito', sans-serif;
       font-size: 1.5rem;
       font-weight: 800;
       letter-spacing: -0.03em;
