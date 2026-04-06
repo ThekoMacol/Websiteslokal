@@ -32,7 +32,7 @@ export async function onRequestPost(context) {
   if (!message?.trim()) return err('Nachricht ist erforderlich.', corsHeaders);
 
   const RESEND_API_KEY  = env.RESEND_API_KEY;
-  const CONTACT_TO_EMAIL = env.CONTACT_TO_EMAIL;
+  const CONTACT_TO_EMAIL = env.CONTACT_TO_EMAIL || 'kornelius.thelen@log1k.de';
 
   if (!RESEND_API_KEY || !CONTACT_TO_EMAIL) {
     return new Response(JSON.stringify({ error: 'Serverkonfigurationsfehler.' }), {
