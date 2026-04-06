@@ -134,9 +134,10 @@
       vertical-align: baseline;
       overflow: hidden;
       max-width: 1em;
+      margin-right: 0;
       position: relative;
       margin-left: -0.05em;
-      transition: max-width 0.3s ease 0.3s, opacity 0.3s ease 0.3s;
+      transition: max-width 0.3s ease 0.3s, opacity 0.3s ease 0.3s, margin-right 0.3s ease 0.3s;
     }
 
     .eyebrow-s::after {
@@ -163,6 +164,8 @@
     .eyebrow-word {
       display: inline-grid;
       vertical-align: middle;
+      margin-right: 0;
+      transition: margin-right 0.3s ease 0.2s;
     }
 
     .eyebrow-local,
@@ -178,7 +181,7 @@
 
     .hero-eyebrow.hovered .eyebrow-local { opacity: 0; }
     .hero-eyebrow.hovered .eyebrow-dein  { opacity: 1; }
-    .hero-eyebrow.hovered .eyebrow-word  { margin-right: -0.75em; transition: margin-right 0.3s ease 0.2s; }
+    .hero-eyebrow.hovered .eyebrow-word  { margin-right: -0.75em; }
 
     .hero-eyebrow {
       display: inline-flex;
