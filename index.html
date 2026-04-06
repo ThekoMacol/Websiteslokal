@@ -160,27 +160,35 @@
       margin-right: -0.5em;
     }
 
-    .eyebrow-word {
-      display: inline-grid;
-      vertical-align: middle;
-      margin-right: 0;
-      transition: margin-right 0.3s ease 0.2s;
-    }
-
-    .eyebrow-local,
-    .eyebrow-dein {
-      grid-area: 1 / 1;
-      transition: opacity 0.25s ease 0.2s;
+    .eyebrow-local {
+      display: inline-block;
+      overflow: hidden;
+      max-width: 6ch;
+      opacity: 1;
+      vertical-align: bottom;
+      transition: max-width 0.3s ease 0.2s, opacity 0.2s ease 0.2s;
     }
 
     .eyebrow-dein {
+      display: inline-block;
+      overflow: hidden;
+      max-width: 0;
       opacity: 0;
       font-weight: 800;
+      white-space: nowrap;
+      vertical-align: bottom;
+      transition: max-width 0.3s ease 0.2s, opacity 0.2s ease 0.2s;
     }
 
-    .hero-eyebrow.hovered .eyebrow-local { opacity: 0; }
-    .hero-eyebrow.hovered .eyebrow-dein  { opacity: 1; }
-    .hero-eyebrow.hovered .eyebrow-word  { margin-right: -0.75em; }
+    .hero-eyebrow.hovered .eyebrow-local {
+      max-width: 0;
+      opacity: 0;
+    }
+
+    .hero-eyebrow.hovered .eyebrow-dein {
+      max-width: 5ch;
+      opacity: 1;
+    }
 
     .hero-eyebrow {
       display: inline-flex;
