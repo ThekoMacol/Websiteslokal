@@ -86,7 +86,7 @@ export async function onRequestPost(context) {
       method: 'POST',
       headers: { 'Authorization': `Bearer ${RESEND_API_KEY}`, 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        from: 'Kontakt <noreply@webseite-hagen.de>',
+        from: 'Kontakt webseite-hagen.de <noreply@log1k.de>',
         to: [CONTACT_TO_EMAIL],
         reply_to: email.trim(),
         subject: 'Neue Anfrage - webseite-hagen.de',
