@@ -397,14 +397,16 @@
       color: var(--accent);
     }
 
-    .offer-price-note {
-      font-size: 0.78rem;
+    .offer-price small {
+      display: block;
+      font-size: 0.72rem;
+      font-weight: 500;
       color: var(--faint);
-      text-align: right;
-      margin-top: -0.25rem;
+      letter-spacing: 0.01em;
+      margin-top: 0.2rem;
     }
 
-    .offer-cta { flex-shrink: 0; }
+.offer-cta { flex-shrink: 0; }
 
     /* PRINZIP */
     .principle {
@@ -729,8 +731,7 @@
         <li>Online in 1 Woche</li>
       </ul>
       <div class="offer-right">
-        <div class="offer-price">799,- <span>€</span></div>
-        <p class="offer-price-note">inkl. MwSt.</p>
+        <div class="offer-price">799,- <span>€</span><small>inkl. MwSt.</small></div>
         <button class="btn-send offer-cta" onclick="openModal(event)">Anfragen</button>
       </div>
     </div>
