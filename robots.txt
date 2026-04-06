@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+Disallow: /functions/
+
+Sitemap: https://websitefuerdeinunternehmen.de/sitemap.xml
