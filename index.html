@@ -131,13 +131,31 @@
 
     .eyebrow-s {
       display: inline-block;
-      transition: text-decoration 0s;
+      vertical-align: baseline;
+      overflow: hidden;
+      max-width: 1em;
+      position: relative;
+      transition: max-width 0.3s ease 0.3s, opacity 0.3s ease 0.3s;
     }
 
-    .hero-eyebrow:hover .eyebrow-s {
-      text-decoration: line-through;
-      text-decoration-thickness: 2px;
-      text-decoration-color: currentColor;
+    .eyebrow-s::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 52%;
+      width: 0;
+      height: 1.5px;
+      background: currentColor;
+      transition: width 0.25s ease;
+    }
+
+    .hero-eyebrow.hovered .eyebrow-s::after {
+      width: 100%;
+    }
+
+    .hero-eyebrow.hovered .eyebrow-s {
+      max-width: 0;
+      opacity: 0;
     }
 
     .eyebrow-word {
@@ -148,7 +166,7 @@
     .eyebrow-local,
     .eyebrow-dein {
       grid-area: 1 / 1;
-      transition: opacity 0.2s ease;
+      transition: opacity 0.25s ease 0.2s;
     }
 
     .eyebrow-dein {
@@ -156,8 +174,8 @@
       font-weight: 800;
     }
 
-    .hero-eyebrow:hover .eyebrow-local { opacity: 0; }
-    .hero-eyebrow:hover .eyebrow-dein  { opacity: 1; }
+    .hero-eyebrow.hovered .eyebrow-local { opacity: 0; }
+    .hero-eyebrow.hovered .eyebrow-dein  { opacity: 1; }
 
     .hero-eyebrow {
       display: inline-flex;
@@ -836,6 +854,11 @@
 </div>
 
 <script>
+  // Eyebrow hover — stays on end state after first trigger
+  document.querySelector('.hero-eyebrow').addEventListener('mouseenter', function() {
+    this.classList.add('hovered');
+  }, { once: true });
+
   // Scroll reveal
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
