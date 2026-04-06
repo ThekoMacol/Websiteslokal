@@ -228,17 +228,6 @@
       color: var(--text);
     }
 
-    .hero-kw {
-      display: block;
-      font-size: 0.85rem;
-      font-weight: 600;
-      letter-spacing: 0.04em;
-      color: var(--accent);
-      margin-bottom: 0.6rem;
-      opacity: 0;
-      animation: fadeUp 0.4s ease 0.1s forwards;
-    }
-
     .hero h1 .word {
       display: block;
       opacity: 0;
@@ -246,8 +235,7 @@
     }
 
     .hero h1 .word:nth-child(1) { animation-delay: 0.15s; }
-    .hero h1 .word:nth-child(2) { animation-delay: 0.32s; }
-    .hero h1 .word:nth-child(3) { animation-delay: 0.49s; color: var(--accent); }
+    .hero h1 .word:nth-child(2) { animation-delay: 0.32s; color: var(--accent); }
 
     .hero p {
       font-size: 1.15rem;
@@ -697,13 +685,14 @@
     }
 
     /* TRUST LINE */
-    .hero-trust {
+    .hero p.hero-trust {
       margin-top: 1.25rem;
       font-size: 0.78rem;
       color: var(--faint);
       letter-spacing: 0.04em;
       opacity: 0;
       animation: fadeUp 0.4s ease 1.05s forwards;
+      max-width: none;
     }
 
     .hero-trust span {
@@ -1028,7 +1017,25 @@
     @media (max-width: 640px) {
       body { padding: 0; }
       .page { border: none; box-shadow: none; }
-      :root { --indent: 1.5rem; }
+      :root { --indent: 1.25rem; }
+
+      nav { height: 54px; }
+      .nav-cta { font-size: 0.78rem; padding: 0.4rem 0.9rem; }
+
+      .hero { padding: 4rem var(--indent) 3.5rem; }
+      .hero h1 { font-size: clamp(2rem, 8vw, 2.6rem); margin-bottom: 1.25rem; }
+      .hero p { font-size: 1rem; }
+      .hero-btn { margin-top: 2rem; }
+      .hero-btn .btn-send { width: 100%; text-align: center; }
+
+      .block { padding: 3rem var(--indent); }
+
+      .pricing-box { padding: 1.5rem; }
+      .pricing-price { font-size: 2.1rem; }
+
+      .cta-final { padding: 3rem var(--indent); }
+      .cta-final .btn-white { width: 100%; text-align: center; }
+
       .form-row { grid-template-columns: 1fr; }
       .service-grid { grid-template-columns: 1fr; }
       footer { flex-direction: column; align-items: flex-start; gap: 0.4rem; }
@@ -1049,7 +1056,6 @@
   <section class="hero">
     <span class="hero-eyebrow"><span class="eyebrow-ws">Website<span class="eyebrow-s">s</span></span> für <span class="eyebrow-word"><span class="eyebrow-local">lokale</span><span class="eyebrow-dein">DEIN</span></span> Unternehmen</span>
     <h1>
-      <span class="hero-kw">Website erstellen lassen Hagen – in 48h online</span>
       <span class="word">Keine Website?</span>
       <span class="word">Oder eine, die keine Kunden bringt?</span>
     </h1>
@@ -1222,10 +1228,10 @@
 </div>
 
 <script>
-  // Eyebrow hover — stays on end state after first trigger
-  document.querySelector('.hero-eyebrow').addEventListener('mouseenter', function() {
-    this.classList.add('hovered');
-  }, { once: true });
+  // Eyebrow auto-animation — triggers once after page load
+  setTimeout(function() {
+    document.querySelector('.hero-eyebrow').classList.add('hovered');
+  }, 1600);
 
   // Scroll reveal
   const observer = new IntersectionObserver((entries) => {
