@@ -232,28 +232,6 @@
       color: var(--faint);
     }
 
-    /* CTA */
-    .cta-block {
-      padding: 6rem var(--indent);
-      max-width: 640px;
-      margin: 0 auto;
-      border-top: 1px solid #ebebeb;
-    }
-
-    .cta-block h2 {
-      font-size: clamp(1.6rem, 4vw, 2.4rem);
-      font-weight: 800;
-      letter-spacing: -0.03em;
-      margin-bottom: 1rem;
-    }
-
-    .cta-block p {
-      color: var(--muted);
-      font-size: 1rem;
-      margin-bottom: 2.5rem;
-      max-width: 420px;
-    }
-
     /* FORM */
     .contact-form {
       display: flex;
@@ -331,6 +309,63 @@
       cursor: default;
     }
 
+    /* MODAL */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.45);
+      z-index: 200;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+    }
+
+    .modal-overlay.open {
+      display: flex;
+    }
+
+    .modal {
+      background: var(--bg);
+      width: 100%;
+      max-width: 520px;
+      max-height: 90vh;
+      overflow-y: auto;
+      padding: 2.5rem;
+      position: relative;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 1.25rem;
+      right: 1.25rem;
+      background: none;
+      border: none;
+      font-size: 1.4rem;
+      line-height: 1;
+      cursor: pointer;
+      color: var(--faint);
+      transition: color 0.15s;
+      padding: 0.25rem;
+    }
+
+    .modal-close:hover {
+      color: var(--text);
+    }
+
+    .modal h2 {
+      font-size: 1.5rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      margin-bottom: 0.5rem;
+    }
+
+    .modal > p {
+      color: var(--muted);
+      font-size: 0.92rem;
+      margin-bottom: 2rem;
+    }
+
     /* FOOTER */
     footer {
       border-top: 1px solid #ebebeb;
@@ -377,13 +412,14 @@
   <!-- NAV -->
   <nav>
     <span class="nav-logo">WebsitesLokal</span>
-    <a href="#kontakt" class="nav-cta">Anfragen</a>
+    <a href="#" class="nav-cta" onclick="openModal(event)">Anfragen</a>
   </nav>
 
   <!-- HERO -->
   <section class="hero">
     <h1>Einfach.<br>Klar.<br>Funktioniert.</h1>
     <p>Websites für lokale Unternehmen, die sofort verstanden werden - und Anfragen bringen.</p>
+    <button class="btn-send" style="margin-top:2.5rem;" onclick="openModal(event)">Jetzt anfragen</button>
   </section>
 
   <!-- PROBLEM -->
@@ -450,32 +486,35 @@
     </p>
   </div>
 
-  <!-- KONTAKT -->
-  <div class="cta-block" id="kontakt">
-    <h2>Jetzt anfragen.</h2>
-    <p>Kurze Nachricht genügt. Wir melden uns innerhalb von 24 Stunden.</p>
+  <!-- MODAL -->
+  <div class="modal-overlay" id="modal" onclick="handleOverlayClick(event)">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button class="modal-close" onclick="closeModal()" aria-label="Schließen">&times;</button>
+      <h2 id="modal-title">Jetzt anfragen.</h2>
+      <p>Kurze Nachricht genügt. Wir melden uns innerhalb von 24 Stunden.</p>
 
-    <form class="contact-form" onsubmit="handleSubmit(event)">
-      <div class="form-row">
-        <div class="form-group">
-          <label for="name">Name</label>
-          <input type="text" id="name" placeholder="Max Mustermann" required />
+      <form class="contact-form" onsubmit="handleSubmit(event)">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Max Mustermann" required />
+          </div>
+          <div class="form-group">
+            <label for="business">Unternehmen</label>
+            <input type="text" id="business" placeholder="Ihr Betrieb" />
+          </div>
         </div>
         <div class="form-group">
-          <label for="business">Unternehmen</label>
-          <input type="text" id="business" placeholder="Ihr Betrieb" />
+          <label for="email">E-Mail</label>
+          <input type="email" id="email" placeholder="max@mustermann.de" required />
         </div>
-      </div>
-      <div class="form-group">
-        <label for="email">E-Mail</label>
-        <input type="email" id="email" placeholder="max@mustermann.de" required />
-      </div>
-      <div class="form-group">
-        <label for="message">Was brauchen Sie?</label>
-        <textarea id="message" placeholder="Kurze Beschreibung - ein Satz reicht."></textarea>
-      </div>
-      <button type="submit" class="btn-send">Absenden</button>
-    </form>
+        <div class="form-group">
+          <label for="message">Was brauchen Sie?</label>
+          <textarea id="message" placeholder="Kurze Beschreibung - ein Satz reicht."></textarea>
+        </div>
+        <button type="submit" class="btn-send">Absenden</button>
+      </form>
+    </div>
   </div>
 
   <!-- FOOTER -->
@@ -487,6 +526,28 @@
   </footer>
 
   <script>
+    const modal = document.getElementById('modal');
+
+    function openModal(e) {
+      if (e) e.preventDefault();
+      modal.classList.add('open');
+      document.body.style.overflow = 'hidden';
+      modal.querySelector('input, textarea').focus();
+    }
+
+    function closeModal() {
+      modal.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    function handleOverlayClick(e) {
+      if (e.target === modal) closeModal();
+    }
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeModal();
+    });
+
     function handleSubmit(e) {
       e.preventDefault();
       const btn = e.target.querySelector('.btn-send');
