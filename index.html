@@ -129,10 +129,41 @@
       position: relative;
     }
 
+    .eyebrow-s {
+      display: inline-block;
+      transition: text-decoration 0s;
+    }
+
+    .hero-eyebrow:hover .eyebrow-s {
+      text-decoration: line-through;
+      text-decoration-thickness: 2px;
+      text-decoration-color: currentColor;
+    }
+
+    .eyebrow-word {
+      display: inline-grid;
+      vertical-align: middle;
+    }
+
+    .eyebrow-local,
+    .eyebrow-dein {
+      grid-area: 1 / 1;
+      transition: opacity 0.2s ease;
+    }
+
+    .eyebrow-dein {
+      opacity: 0;
+      font-weight: 800;
+    }
+
+    .hero-eyebrow:hover .eyebrow-local { opacity: 0; }
+    .hero-eyebrow:hover .eyebrow-dein  { opacity: 1; }
+
     .hero-eyebrow {
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
+      cursor: default;
       font-family: 'Inter', sans-serif;
       font-size: 0.75rem;
       font-weight: 600;
@@ -658,7 +689,7 @@
 
   <!-- HERO -->
   <section class="hero">
-    <span class="hero-eyebrow">Websites für lokale Unternehmen</span>
+    <span class="hero-eyebrow">Website<span class="eyebrow-s">s</span> für <span class="eyebrow-word"><span class="eyebrow-local">lokale</span><span class="eyebrow-dein">DEIN</span></span> Unternehmen</span>
     <h1>
       <span class="word">Einfach.</span>
       <span class="word">Klar.</span>
