@@ -950,6 +950,193 @@
       letter-spacing: 0.04em;
     }
 
+    /* NO-BRAINER SECTION */
+    .nobrainer-headline {
+      font-family: 'Nunito', sans-serif;
+      font-size: clamp(1.35rem, 3.5vw, 1.9rem);
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      line-height: 1.2;
+      margin-bottom: 0.85rem;
+    }
+
+    .nobrainer-sub {
+      font-size: 1rem;
+      color: var(--muted);
+      margin-bottom: 1rem;
+      line-height: 1.65;
+    }
+
+    .nobrainer-pain {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.45rem;
+      margin-bottom: 2.25rem;
+    }
+
+    .nobrainer-pain li {
+      font-size: 0.97rem;
+      color: var(--muted);
+      display: flex;
+      align-items: baseline;
+      gap: 0.7rem;
+    }
+
+    .nobrainer-pain li::before {
+      content: '→';
+      color: var(--faint);
+      flex-shrink: 0;
+    }
+
+    .nobrainer-options {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .option-card {
+      padding: 1.5rem;
+      border-radius: 2px;
+    }
+
+    .option-bad {
+      background: #FEF2F2;
+      border: 1.5px solid #FECACA;
+    }
+
+    .option-good {
+      background: var(--accent-light);
+      border: 1.5px solid var(--accent);
+    }
+
+    .option-tag {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 0.85rem;
+    }
+
+    .option-bad .option-tag  { color: #DC2626; }
+    .option-good .option-tag { color: var(--accent); }
+
+    .option-card h3 {
+      font-family: 'Nunito', sans-serif;
+      font-size: 0.97rem;
+      font-weight: 800;
+      margin-bottom: 0.75rem;
+    }
+
+    .option-lines {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.45rem;
+    }
+
+    .option-lines li {
+      font-size: 0.88rem;
+      color: var(--muted);
+      line-height: 1.4;
+    }
+
+    .option-bad .option-lines li::before  { content: '✗ '; color: #DC2626; font-weight: 700; }
+    .option-good .option-lines li::before { content: '✔ '; color: var(--accent); font-weight: 700; }
+
+    .option-cost {
+      margin-top: 1rem;
+      padding-top: 0.75rem;
+      border-top: 1px solid rgba(0,0,0,0.08);
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: #DC2626;
+    }
+
+    .nobrainer-offer {
+      border-top: 1px solid var(--border);
+      padding-top: 1.75rem;
+    }
+
+    .nobrainer-price-line {
+      display: flex;
+      align-items: baseline;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 1.25rem;
+    }
+
+    .nobrainer-price {
+      font-family: 'Nunito', sans-serif;
+      font-size: 2.4rem;
+      font-weight: 900;
+      color: var(--accent);
+      letter-spacing: -0.03em;
+      line-height: 1;
+    }
+
+    .nobrainer-price span {
+      font-size: 1.7rem;
+    }
+
+    .nobrainer-price small {
+      display: block;
+      font-size: 0.7rem;
+      font-weight: 500;
+      color: var(--faint);
+      margin-top: 0.15rem;
+    }
+
+    .nobrainer-tagline {
+      font-size: 0.97rem;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .arrow-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      margin: 1.25rem 0 1.5rem;
+    }
+
+    .arrow-list li {
+      font-size: 0.95rem;
+      color: var(--text);
+      display: flex;
+      align-items: baseline;
+      gap: 0.75rem;
+      line-height: 1.45;
+    }
+
+    .arrow-list li::before {
+      content: '✔';
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 0.8rem;
+      flex-shrink: 0;
+    }
+
+    .arrow-list li strong {
+      font-weight: 600;
+    }
+
+    .nobrainer-result {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text);
+      padding: 0.85rem 1.1rem;
+      background: var(--accent-light);
+      border-left: 3px solid var(--accent);
+      margin-bottom: 1.5rem;
+    }
+
+    @media (max-width: 640px) {
+      .nobrainer-options { grid-template-columns: 1fr; }
+    }
+
     /* DIFFERENZIERUNG */
     .differenz-text {
       font-size: 1.1rem;
@@ -1091,28 +1278,54 @@
     <p class="check-footnote">Du kümmerst dich um dein Geschäft. Den Rest übernehme ich.</p>
   </div>
 
-  <!-- ANGEBOT -->
+  <!-- NO-BRAINER ANGEBOT -->
   <div class="block reveal">
     <p class="label">Das Angebot</p>
-    <div class="pricing-box">
-      <p class="pricing-title">Komplett-Paket</p>
-      <div class="pricing-price"><span>€</span> 999,-<small>inkl. MwSt.</small></div>
-      <ul class="pricing-includes">
-        <li>Startseite + 2 Unterseiten</li>
-        <li>Kontaktformular</li>
-        <li>SEO-Optimierung</li>
-        <li>Domain- und Hosting-Einrichtung</li>
-        <li>Texterstellung auf Wunsch</li>
-      </ul>
-      <div class="pricing-optional">
-        <p>Auf Wunsch zusätzlich</p>
-        <ul>
-          <li>Mehrsprachigkeit</li>
-          <li>Online-Buchungssystem</li>
-          <li>Google-My-Business-Optimierung</li>
+    <h2 class="nobrainer-headline">Was kostet dich keine funktionierende Webseite?</h2>
+    <p class="nobrainer-sub">Die meisten verlieren jeden Monat Kunden,<br>weil ihre Webseite nicht verstanden wird.</p>
+    <ul class="nobrainer-pain">
+      <li>Keine Anfragen</li>
+      <li>Keine Klarheit</li>
+      <li>Keine Entscheidung</li>
+    </ul>
+
+    <div class="nobrainer-options">
+      <div class="option-card option-bad">
+        <p class="option-tag">Option 1</p>
+        <h3>Nichts ändern</h3>
+        <ul class="option-lines">
+          <li>Deine Webseite bleibt wie sie ist</li>
+          <li>Besucher verstehen nicht, was du machst</li>
+          <li>Kunden gehen zur Konkurrenz</li>
         </ul>
+        <p class="option-cost">Kosten: jeden Monat verlorene Anfragen</p>
       </div>
-      <button class="btn-send" onclick="openModal(event)" style="margin-top:1.75rem;">Kostenloses Erstgespräch sichern</button>
+      <div class="option-card option-good">
+        <p class="option-tag">Option 2</p>
+        <h3>Klare Webseite, die funktioniert</h3>
+        <ul class="option-lines">
+          <li>Besucher verstehen sofort dein Angebot</li>
+          <li>Mehr Anfragen statt nur Klicks</li>
+          <li>Du wirst bei Google gefunden</li>
+        </ul>
+        <p class="option-cost" style="color:var(--accent);">Einmaliger Fixpreis. Fertig.</p>
+      </div>
+    </div>
+
+    <div class="nobrainer-offer">
+      <div class="nobrainer-price-line">
+        <div class="nobrainer-price"><span>€</span> 999,-<small>inkl. MwSt.</small></div>
+        <p class="nobrainer-tagline">Webseite, die in 1 Sekunde<br>verstanden wird – und Anfragen bringt.</p>
+      </div>
+      <ul class="arrow-list">
+        <li><strong>Klare Struktur</strong> → Besucher verstehen sofort dein Angebot</li>
+        <li><strong>Fokus auf Kontakt</strong> → mehr Anfragen statt nur Klicks</li>
+        <li><strong>Mobile optimiert</strong> → da entscheidet sich alles</li>
+        <li><strong>Saubere Basis für Google</strong> → damit du gefunden wirst</li>
+        <li><strong>Schnelle Umsetzung</strong> → kein monatelanges Warten</li>
+      </ul>
+      <p class="nobrainer-result">Besucher → verstehen → handeln</p>
+      <button class="btn-send" onclick="openModal(event)">Kostenloses Erstgespräch sichern</button>
     </div>
   </div>
 
