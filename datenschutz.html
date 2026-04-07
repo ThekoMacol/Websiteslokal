@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Datenschutz - websitefuerdeinunternehmen.de</title>
+  <title>Datenschutz – webseite-hagen.de</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -15,15 +15,15 @@
     }
 
     :root {
-      --text:         #4A4A4A;
-      --muted:        #717171;
-      --faint:        #ABABAB;
-      --bg:           #FFFFFF;
-      --surface:      #F4FCF7;
-      --border:       #E8E8E8;
-      --outer:        #2C2C2C;
-      --accent:        #27AE60;
-      --indent:       2.5rem;
+      --text:    #4A4A4A;
+      --muted:   #717171;
+      --faint:   #ABABAB;
+      --bg:      #FFFFFF;
+      --surface: #F4FCF7;
+      --border:  #E8E8E8;
+      --outer:   #2C2C2C;
+      --accent:  #27AE60;
+      --indent:  2.5rem;
     }
 
     body {
@@ -39,7 +39,7 @@
       margin: 0 auto;
       background: var(--bg);
       border: 1px solid var(--border);
-      box-shadow: 0 2px 32px rgba(42, 35, 28, 0.07);
+      box-shadow: 0 2px 32px rgba(0,0,0,0.07);
       overflow: hidden;
     }
 
@@ -73,9 +73,7 @@
       transition: color 0.15s;
     }
 
-    .nav-back:hover {
-      color: var(--text);
-    }
+    .nav-back:hover { color: var(--text); }
 
     .content {
       max-width: 640px;
@@ -93,6 +91,7 @@
     }
 
     h1 {
+      font-family: 'Nunito', sans-serif;
       font-size: clamp(1.8rem, 4vw, 2.6rem);
       font-weight: 800;
       letter-spacing: -0.03em;
@@ -136,10 +135,7 @@
       margin-bottom: 0.3rem;
     }
 
-    a {
-      color: var(--text);
-      word-break: break-word;
-    }
+    a { color: var(--text); word-break: break-word; }
 
     footer {
       border-top: 1px solid var(--border);
@@ -154,17 +150,13 @@
       background: var(--surface);
     }
 
-    footer a {
-      color: var(--faint);
-      text-decoration: none;
-    }
-
+    footer a { color: var(--faint); text-decoration: none; }
     footer a:hover { color: var(--muted); }
 
     @media (max-width: 640px) {
       body { padding: 0; }
       .page { border: none; box-shadow: none; }
-      :root { --indent: 1.5rem; }
+      :root { --indent: 1.25rem; }
       footer { flex-direction: column; align-items: flex-start; gap: 0.4rem; }
     }
   </style>
@@ -173,14 +165,14 @@
 <div class="page">
 
   <nav>
-    <a href="index.html" class="nav-logo">websitefuerdeinunternehmen.de</a>
+    <a href="index.html" class="nav-logo">webseite-hagen.de</a>
     <a href="index.html" class="nav-back">← Zurück</a>
   </nav>
 
   <div class="content">
     <p class="label">Rechtliches</p>
     <h1>Datenschutzerklärung</h1>
-    <p class="meta">Stand: März 2026 · Diese Datenschutzerklärung gilt für die Website websitefuerdeinunternehmen.de und alle darauf eingebetteten Dienste.</p>
+    <p class="meta">Stand: April 2026 · Gültig für webseite-hagen.de</p>
 
     <h2>1. Verantwortlicher</h2>
     <p>
@@ -192,49 +184,28 @@
     </p>
 
     <h2>2. Allgemeine Hinweise</h2>
-    <p>Der Schutz Ihrer personenbezogenen Daten ist mir wichtig. Ich verarbeite Ihre Daten ausschließlich auf Grundlage der gesetzlichen Bestimmungen der Datenschutz-Grundverordnung (DSGVO) sowie des Bundesdatenschutzgesetzes (BDSG). Diese Datenschutzerklärung informiert Sie darüber, welche Daten auf dieser Website erhoben werden, zu welchem Zweck und auf welcher Rechtsgrundlage.</p>
+    <p>Der Schutz Ihrer personenbezogenen Daten ist mir wichtig. Ich verarbeite Ihre Daten ausschließlich auf Grundlage der gesetzlichen Bestimmungen der DSGVO sowie des BDSG. Diese Datenschutzerklärung informiert Sie darüber, welche Daten auf dieser Website erhoben werden, zu welchem Zweck und auf welcher Rechtsgrundlage.</p>
 
-    <h2>3. Hosting und Serverprotokolle</h2>
-    <p>Diese Website wird über einen Webserver bereitgestellt. Beim Abruf der Website übermittelt Ihr Browser automatisch folgende Daten an den Server:</p>
+    <h2>3. Hosting (Cloudflare Pages)</h2>
+    <p>Diese Website wird über Cloudflare Pages (Cloudflare Inc., 101 Townsend St., San Francisco, CA 94107, USA) gehostet. Beim Aufruf der Website übermittelt Ihr Browser automatisch folgende Daten an den Server:</p>
     <ul>
       <li>IP-Adresse des anfragenden Geräts</li>
       <li>Datum und Uhrzeit des Zugriffs</li>
-      <li>URL der aufgerufenen Seite</li>
-      <li>Browsertyp, Betriebssystem, Referrer-URL</li>
+      <li>Aufgerufene URL, Browsertyp, Betriebssystem, Referrer-URL</li>
     </ul>
-    <p>Diese Daten werden ausschließlich zur technischen Bereitstellung der Website und zur Erkennung von Angriffen verwendet. Eine Zusammenführung mit anderen Datenquellen findet nicht statt. Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der Sicherheit des Betriebs).</p>
+    <p>Diese Daten werden ausschließlich zur technischen Bereitstellung der Website und zur Absicherung gegen Angriffe genutzt. Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO. Weitere Informationen: <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">cloudflare.com/privacypolicy</a></p>
 
-    <h2>4. Kontaktaufnahme per E-Mail</h2>
-    <p>Wenn Sie mich per E-Mail kontaktieren, werden die von Ihnen übermittelten Daten (Name, E-Mail-Adresse, Nachrichteninhalt) zur Bearbeitung Ihrer Anfrage gespeichert und verarbeitet. Diese Daten werden nicht ohne Ihre Einwilligung an Dritte weitergegeben. Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO (Vertragsanbahnung / vorvertragliche Maßnahmen) bzw. Art. 6 Abs. 1 lit. f DSGVO. Die Daten werden gelöscht, sobald Ihre Anfrage abschließend bearbeitet wurde.</p>
+    <h2>4. Kontaktformular</h2>
+    <p>Wenn Sie das Kontaktformular auf dieser Website nutzen, werden die von Ihnen eingegebenen Daten (Name, E-Mail-Adresse, Unternehmen, Nachricht) zur Bearbeitung Ihrer Anfrage verarbeitet. Die Übermittlung der E-Mail erfolgt über den Dienst Resend (Resend Inc., USA). Ihre Daten werden nicht ohne Ihre Einwilligung an Dritte weitergegeben. Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO (Vertragsanbahnung) bzw. Art. 6 Abs. 1 lit. f DSGVO. Die Daten werden gelöscht, sobald Ihre Anfrage abschließend bearbeitet wurde.</p>
+    <p>Weitere Informationen zu Resend: <a href="https://resend.com/privacy" target="_blank" rel="noopener">resend.com/privacy</a></p>
 
-    <h2>5. Datenspeicherung im CRM (Google Sheets)</h2>
-    <p>Daten, die über den Chatbot oder per E-Mail eingehen, können in einem CRM-System auf Basis von Google Sheets (Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA) gespeichert werden. Dies betrifft insbesondere:</p>
-    <ul>
-      <li>Name</li>
-      <li>E-Mail-Adresse</li>
-      <li>Angaben zum Projekt oder Anliegen</li>
-      <li>Datum der Kontaktaufnahme</li>
-    </ul>
+    <h2>5. Google Fonts</h2>
+    <p>Diese Website verwendet Schriftarten von Google Fonts (Google LLC, USA). Beim Aufruf der Seite werden die Schriftarten von Google-Servern geladen, wobei Ihre IP-Adresse übertragen werden kann. Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO. Weitere Informationen: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></p>
 
-    <h3>Zweck der Verarbeitung</h3>
-    <p>Die Speicherung dient ausschließlich der strukturierten Verwaltung von Kontakt- und Kundenanfragen und der Vorbereitung einer gezielten Rückmeldung. Die Daten werden nicht an Dritte verkauft oder zu Werbezwecken genutzt.</p>
+    <h2>6. Cookies</h2>
+    <p>Diese Website setzt keine eigenen Cookies und verwendet kein Tracking.</p>
 
-    <h3>Datenübertragung in Drittländer</h3>
-    <p>Google LLC hat seinen Sitz in den USA. Die Datenübertragung erfolgt auf Grundlage der EU-Standardvertragsklauseln (Art. 46 Abs. 2 lit. c DSGVO), die Google im Rahmen seiner Nutzungsbedingungen und Datenschutzhinweise bereitstellt.</p>
-
-    <h3>Rechtsgrundlage</h3>
-    <p>Rechtsgrundlage ist das berechtigte Interesse an der strukturierten Verwaltung von Kundenanfragen (Art. 6 Abs. 1 lit. f DSGVO) sowie - sofern ein Vertragsverhältnis angebahnt wird - Art. 6 Abs. 1 lit. b DSGVO.</p>
-
-    <h3>Datenschutzerklärung von Google</h3>
-    <p>Weitere Informationen finden Sie in der Datenschutzerklärung von Google: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">https://policies.google.com/privacy</a></p>
-
-    <h2>6. Google Fonts</h2>
-    <p>Diese Website verwendet Schriftarten von Google Fonts (Google LLC, USA). Die Schriftarten werden beim Aufruf der Seite von Google-Servern geladen, wobei Ihre IP-Adresse an Google übertragen werden kann. Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO. Weitere Informationen: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">https://policies.google.com/privacy</a></p>
-
-    <h2>7. Cookies</h2>
-    <p>Diese Website verwendet keine Tracking-Cookies.</p>
-
-    <h2>8. Ihre Rechte</h2>
+    <h2>7. Ihre Rechte</h2>
     <p>Sie haben gegenüber mir folgende Rechte bezüglich Ihrer personenbezogenen Daten:</p>
     <ul>
       <li>Auskunftsrecht (Art. 15 DSGVO)</li>
@@ -243,17 +214,16 @@
       <li>Recht auf Einschränkung der Verarbeitung (Art. 18 DSGVO)</li>
       <li>Recht auf Datenübertragbarkeit (Art. 20 DSGVO)</li>
       <li>Widerspruchsrecht (Art. 21 DSGVO)</li>
-      <li>Recht auf Widerruf einer Einwilligung (Art. 7 Abs. 3 DSGVO)</li>
     </ul>
-    <p>Zur Ausübung Ihrer Rechte wenden Sie sich bitte per E-Mail an: <a href="mailto:kornelius.thelen@log1k.de">kornelius.thelen@log1k.de</a></p>
-    <p>Unbeschadet anderweitiger verwaltungsrechtlicher oder gerichtlicher Rechtsbehelfe steht Ihnen das Recht auf Beschwerde bei der zuständigen Aufsichtsbehörde zu. Die zuständige Aufsichtsbehörde ist die Landesbeauftragte für Datenschutz und Informationsfreiheit Nordrhein-Westfalen (LDI NRW), Kavalleriestr. 2-4, 40213 Düsseldorf.</p>
+    <p>Zur Ausübung Ihrer Rechte wenden Sie sich bitte an: <a href="mailto:kornelius.thelen@log1k.de">kornelius.thelen@log1k.de</a></p>
+    <p>Sie haben zudem das Recht auf Beschwerde bei der zuständigen Aufsichtsbehörde: Landesbeauftragte für Datenschutz und Informationsfreiheit NRW (LDI NRW), Kavalleriestr. 2–4, 40213 Düsseldorf.</p>
 
-    <h2>9. Aktualität und Änderungen</h2>
-    <p>Diese Datenschutzerklärung ist aktuell gültig und hat den Stand März 2026. Durch die Weiterentwicklung dieser Website oder aufgrund geänderter gesetzlicher bzw. behördlicher Vorgaben kann eine Anpassung dieser Datenschutzerklärung notwendig werden.</p>
+    <h2>8. Aktualität</h2>
+    <p>Diese Datenschutzerklärung hat den Stand April 2026. Änderungen durch Weiterentwicklung der Website oder gesetzliche Vorgaben bleiben vorbehalten.</p>
   </div>
 
   <footer>
-    <span>&copy; 2026 websitefuerdeinunternehmen.de</span>
+    <span>&copy; 2026 webseite-hagen.de</span>
     <span>
       <a href="impressum.html">Impressum</a> &nbsp;·&nbsp; <a href="datenschutz.html">Datenschutz</a>
     </span>
