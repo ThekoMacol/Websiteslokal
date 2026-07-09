@@ -1182,6 +1182,71 @@
       color: var(--text);
     }
 
+    /* REFERENZEN */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+    }
+
+    .project-card {
+      border: 1px solid var(--border);
+      overflow: hidden;
+      transition: box-shadow 0.2s, border-color 0.2s;
+      text-decoration: none;
+      display: block;
+      color: inherit;
+    }
+
+    .project-card:hover {
+      box-shadow: 0 6px 24px rgba(0,0,0,0.09);
+      border-color: var(--accent);
+    }
+
+    .project-preview {
+      height: 200px;
+      overflow: hidden;
+      background: var(--surface);
+      position: relative;
+    }
+
+    .project-preview iframe {
+      width: 1280px;
+      height: 900px;
+      border: none;
+      transform: scale(0.295);
+      transform-origin: top left;
+      pointer-events: none;
+    }
+
+    .project-info {
+      padding: 0.9rem 1.1rem;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--bg);
+    }
+
+    .project-name {
+      font-family: 'Nunito', sans-serif;
+      font-size: 0.88rem;
+      font-weight: 800;
+      color: var(--text);
+    }
+
+    .project-arrow {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--accent);
+    }
+
+    @media (max-width: 640px) {
+      .projects-grid { grid-template-columns: 1fr; }
+      .project-preview { height: 180px; }
+      .project-preview iframe { transform: scale(0.265); }
+    }
+
     /* FOOTER */
     footer {
       border-top: 1px solid var(--border);
@@ -1373,6 +1438,34 @@
     <div class="differenz-text">
       <strong>Für Unternehmen in Hagen und Umgebung.</strong>
       Ob Handwerker, Dienstleister oder kleines Ladengeschäft - ich kenne den Markt hier, und ich baue Seiten, die für lokale Kunden funktionieren. Kein Baukasten aus der Schublade, sondern eine Lösung, die zu deinem Betrieb passt.
+    </div>
+  </div>
+
+  <!-- REFERENZEN -->
+  <div class="block wide reveal">
+    <p class="label">Abgeschlossene Projekte</p>
+    <div class="projects-grid">
+
+      <a class="project-card" href="https://log1k.de" target="_blank" rel="noopener">
+        <div class="project-preview">
+          <iframe src="https://log1k.de" loading="lazy" title="log1k.de" scrolling="no" tabindex="-1"></iframe>
+        </div>
+        <div class="project-info">
+          <span class="project-name">log1k.de</span>
+          <span class="project-arrow">↗</span>
+        </div>
+      </a>
+
+      <a class="project-card" href="https://einzelhandel-geschaeft.de" target="_blank" rel="noopener">
+        <div class="project-preview">
+          <iframe src="https://einzelhandel-geschaeft.de" loading="lazy" title="einzelhandel-geschaeft.de" scrolling="no" tabindex="-1"></iframe>
+        </div>
+        <div class="project-info">
+          <span class="project-name">einzelhandel-geschaeft.de</span>
+          <span class="project-arrow">↗</span>
+        </div>
+      </a>
+
     </div>
   </div>
 
